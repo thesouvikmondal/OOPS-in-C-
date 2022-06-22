@@ -1,17 +1,22 @@
 #include<bits/stdc++.h>
 #include<vector>
 #include <iostream>
-//import hero class from another file
-#include"Hero.cpp"
-
 using namespace std;
-// class Hero{
-//     // char name[100];
-//      int health;
-// };
+//import hero class from another file
+//#include"Hero.cpp"
+
+class Hero {
+    public:
+    int health;
+    char level;
+};
 
 
 int main(){
-    Hero h1;
-    cout<<"size :"<<sizeof(h1)<<endl;
+    Hero ramesh;
+    //cout<<"size :"<<sizeof(h1)<<endl;
+    ramesh.health=70;
+    ramesh.level='c';
+    cout<<"health is : "<<ramesh.health<<endl;
+    cout<<"level is : "<<ramesh.level<<endl;
 }
