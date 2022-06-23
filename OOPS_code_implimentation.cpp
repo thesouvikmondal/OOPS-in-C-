@@ -6,17 +6,37 @@ using namespace std;
 //#include"Hero.cpp"
 
 class Hero {
-    public:
+    private:
     int health;
     char level;
+
+    public:
+    //use of getter to acces the peivate property
+    int gethealth(){
+        return health;
+    }
+    char getlevel(){
+        return level;
+    }
+
+    //use of setter to manipulate private properties
+    void sethealth(int h){
+        health=h;
+    } 
+    void setlevel(char ch){
+        level=ch;
+    }
+
 };
 
 
 int main(){
     Hero ramesh;
     //cout<<"size :"<<sizeof(h1)<<endl;
-    ramesh.health=70;
-    ramesh.level='c';
-    cout<<"health is : "<<ramesh.health<<endl;
-    cout<<"level is : "<<ramesh.level<<endl;
+    // ramesh.health=70;
+    // ramesh.level='c';
+    ramesh.sethealth(60);
+    ramesh.setlevel('b');
+    cout<<"health is : "<<ramesh.gethealth()<<endl;
+    cout<<"level is : "<<ramesh.getlevel()<<endl;
 }
