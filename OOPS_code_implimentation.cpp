@@ -6,7 +6,7 @@ using namespace std;
 //#include"Hero.cpp"
 
 class Hero {
-    private:
+    public:
     int health;
     char level;
 
@@ -35,6 +35,11 @@ int main(){
     //cout<<"size :"<<sizeof(h1)<<endl;
     // ramesh.health=70;
     // ramesh.level='c';
+
+    //create hero dynamically 
+    Hero *b=new Hero;
+    cout<<"health is dynamically :"<<b->health<<endl;
+    
     ramesh.sethealth(60);
     ramesh.setlevel('b');
     cout<<"health is : "<<ramesh.gethealth()<<endl;
