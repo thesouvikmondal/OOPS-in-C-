@@ -9,8 +9,12 @@ class Hero {
     public:
     int health;
     char level;
-
-    public:
+    
+    //creating constructor
+    Hero(){
+        cout<<" called constructor"<<endl;
+    }
+    
     //use of getter to acces the peivate property
     int gethealth(){
         return health;
@@ -31,17 +35,21 @@ class Hero {
 
 
 int main(){
+    
     Hero ramesh;
+    
+    //Hero ramesh;
     //cout<<"size :"<<sizeof(h1)<<endl;
     // ramesh.health=70;
     // ramesh.level='c';
 
+
     //create hero dynamically 
-    Hero *b=new Hero;
-    cout<<"health is dynamically :"<<b->health<<endl;
+    // Hero *b=new Hero;
+    // cout<<"health is dynamically :"<<b->health<<endl;
     
-    ramesh.sethealth(60);
-    ramesh.setlevel('b');
-    cout<<"health is : "<<ramesh.gethealth()<<endl;
-    cout<<"level is : "<<ramesh.getlevel()<<endl;
+    // ramesh.sethealth(60);
+    // ramesh.setlevel('b');
+    // cout<<"health is : "<<ramesh.gethealth()<<endl;
+    // cout<<"level is : "<<ramesh.getlevel()<<endl;
 }
