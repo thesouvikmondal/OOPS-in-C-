@@ -35,9 +35,10 @@ class Hero {
 
 
 int main(){
-    
+
+    //called manulay crated constructor 
     Hero ramesh;
-    
+
     //Hero ramesh;
     //cout<<"size :"<<sizeof(h1)<<endl;
     // ramesh.health=70;
