@@ -16,9 +16,20 @@ class Hero {
     }
     
     //parameterised constructor
-    Hero(int health){
+    Hero(int health,char level){
         this->health=health;
+        this->level=level;
     }
+
+
+    //create manual copy constructor
+    Hero(Hero& temp){
+        this->health=temp.health;
+        this->level=temp.level;
+    }
+
+
+
 
     //use of getter to acces the peivate property
     int gethealth(){
@@ -30,8 +41,8 @@ class Hero {
 
     //print function
     void print(){
-        cout<<"health"<<this->health<<endl;
-        cout<<"level"<<this->level<<endl;
+        cout<<"health : "<<this->health<<endl;
+        cout<<"level : "<<this->level<<endl;
     }
 
     //use of setter to manipulate private properties
@@ -46,15 +57,36 @@ class Hero {
 
 
 int main(){
+    Hero s(7,'B');
+    s.print();
+
+    //copy constructor by default
+    Hero r(s);
+    r.print();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     //called manulay crated constructor 
     //Hero ramesh;
 
     //called parametarised constructor
-    Hero ramesh(10);
+    // Hero ramesh(10);
 
-    cout<<"address of ramesh"<<&ramesh<<endl;
-    ramesh.gethealth();
+    // cout<<"address of ramesh"<<&ramesh<<endl;
+    // ramesh.gethealth();
 
 
 
