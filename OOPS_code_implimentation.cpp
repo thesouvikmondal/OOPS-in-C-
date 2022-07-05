@@ -15,12 +15,23 @@ class Hero {
         cout<<" called constructor"<<endl;
     }
     
+    //parameterised constructor
+    Hero(int health){
+        this->health=health;
+    }
+
     //use of getter to acces the peivate property
     int gethealth(){
         return health;
     }
     char getlevel(){
         return level;
+    }
+
+    //print function
+    void print(){
+        cout<<"health"<<this->health<<endl;
+        cout<<"level"<<this->level<<endl;
     }
 
     //use of setter to manipulate private properties
@@ -37,7 +48,18 @@ class Hero {
 int main(){
 
     //called manulay crated constructor 
-    Hero ramesh;
+    //Hero ramesh;
+
+    //called parametarised constructor
+    Hero ramesh(10);
+
+    cout<<"address of ramesh"<<&ramesh<<endl;
+    ramesh.gethealth();
+
+
+
+
+
 
     //Hero ramesh;
     //cout<<"size :"<<sizeof(h1)<<endl;
