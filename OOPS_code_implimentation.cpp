@@ -53,22 +53,42 @@ class Hero {
         level=ch;
     }
 
+
+    //destructor
+    ~Hero(){
+        cout<<"destructor is called"<<endl;
+    }
+
 };
 
 
 int main(){
-    Hero s(7,'B');
-    s.print();
 
-    //copy constructor by default
-    Hero r(s);
-    r.print();
+    Hero a;
 
-
+    //dynamically
+    Hero *b=new Hero();
+    delete b;
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+    // Hero s(7,'B');
+    // s.print();
+
+    // //copy constructor by default
+    // Hero r(s);
+    // r.print();
 
 
 
