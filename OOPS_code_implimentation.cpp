@@ -9,6 +9,8 @@ class Hero {
     public:
     int health;
     char level;
+    //ststic keyword
+    static int timeToTravel;
     
     //creating constructor
     Hero(){
@@ -54,21 +56,46 @@ class Hero {
     }
 
 
-    //destructor
+    //manual destructor
     ~Hero(){
         cout<<"destructor is called"<<endl;
     }
 
-};
+    static int random(){
+        //it can only access static property,here timeToTravel
+        return timeToTravel;
+    }
 
+};
+//intilisation of static keyword
+int Hero :: timeToTravel=6; 
 
 int main(){
+    
+    
+    ///its does not depend on class
+    ///print the static keyword
+    //cout<<Hero::timeToTravel<<endl;
 
-    Hero a;
 
-    //dynamically
-    Hero *b=new Hero();
-    delete b;
+    ///calling static function
+    cout<<Hero::random()<<endl;
+
+
+
+
+   
+
+
+
+
+
+    // Hero a;
+
+    // //dynamically
+    // Hero *b=new Hero();
+
+    // delete b;
 
 
 
